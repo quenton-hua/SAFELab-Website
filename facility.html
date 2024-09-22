@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFELab Facility</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        /* general css styling */
+        .custom-page {
+          width: 100%;
+          display: flex;
+          gap: 20px;
+        }
+  
+        .section-divider {
+          width: 2.5em;
+          height: 0.5em;
+          background-color: #500000;
+        }
+  
+        .custom-page h2 {
+          font-size: 2em !important;
+          font-family: "Oswald", sans-serif !important;
+          color: #500000 !important;
+          margin: 0;
+          font-weight: 400;
+        }
+        .custom-page h3 {
+          font-size: 1.25em !important;
+          font-family: "Oswald", sans-serif !important;
+          font-weight: 400 !important;
+          margin: 0;
+          color: #500000 !important;
+        }
+  
+        section.custom-page {
+          display: flex;
+          flex-direction: column;
+        }
+  
+        section.custom-page p {
+          font-family: "Open Sans", sans-serif !important;
+          font-size: 0.75em !important;
+          color: #797979;
+        }
+        /* end */
+
+        section.top{
+            background-color: #500000;
+            height: 400px;
+            display: flex;
+        }
+        section.top .content{
+            flex: 1
+        }
+
+        .thumbnail{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            flex: 0.60;
+
+        }
+        .thumbnail img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 100px solid #500000; /* Adjust color and opacity as needed */
+            border-top: 400px solid transparent; /* Adjust height to match the .thumbnail height */
+        }
+        .thumbnail {
+            position: relative;
+        }
+    </style>
+    <section class="custom-page">
+        <section class="top">
+            <div class="content">
+test
+            </div>
+            <div class="thumbnail">
+                <img src="https://images.unsplash.com/photo-1726715245558-69afa5ded798?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8" alt="SAFELab Logo">
+            </div>
+        </section>
+    </section>
+</body>
+</html>
