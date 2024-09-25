@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAFELab Facility</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,95 +19,326 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        /* general css styling */
-        .custom-page {
-          width: 100%;
-          display: flex;
-          gap: 20px;
-        }
-  
-        .section-divider {
-          width: 2.5em;
-          height: 0.5em;
-          background-color: #500000;
-        }
-  
-        .custom-page h2 {
-          font-size: 2em !important;
-          font-family: "Oswald", sans-serif !important;
-          color: #500000 !important;
-          margin: 0;
-          font-weight: 400;
-        }
-        .custom-page h3 {
-          font-size: 1.25em !important;
-          font-family: "Oswald", sans-serif !important;
-          font-weight: 400 !important;
-          margin: 0;
-          color: #500000 !important;
-        }
-  
-        section.custom-page {
-          display: flex;
+      /* general css styling */
+      .custom-page {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+      }
+
+      .section-divider {
+        width: 2.5em;
+        height: 0.5em;
+        background-color: #500000;
+      }
+
+      .custom-page h1 {
+        font-size: 2.25em !important;
+        font-family: "Oswald", sans-serif !important;
+        color: #ffffff !important;
+        margin: 0;
+        font-weight: 300;
+      }
+
+      .custom-page h2 {
+        font-size: 2em !important;
+        font-family: "Oswald", sans-serif !important;
+        color: #500000 !important;
+        margin: 0;
+        font-weight: 400;
+      }
+
+      .custom-page h3 {
+        font-size: 1.25em !important;
+        /* use work sans */
+
+        font-family: "Work Sans", sans-serif !important;
+        font-weight: bold;
+        margin: 0;
+        color: #500000 !important;
+      }
+
+      section.custom-page {
+        display: flex;
+        flex-direction: column;
+        overflow-y: hidden;
+      }
+
+      section.custom-page p {
+        font-family: "Open Sans", sans-serif !important;
+        font-size: 0.85em !important;
+        color: #000000;
+      }
+
+      section.custom-page .top p {
+        font-family: "Open Sans", sans-serif !important;
+        font-size: 0.85em !important;
+        color: #ffffff;
+      }
+
+      /* end */
+
+      section.top {
+        background-color: #500000;
+        height: 400px;
+        display: flex;
+      }
+
+      section.top .content-container {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .thumbnail {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        flex: 0.6;
+      }
+
+      .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .thumbnail::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 100px solid #500000;
+        /* Adjust color and opacity as needed */
+        border-bottom: 400px solid transparent;
+        /* Adjust height to match the .thumbnail height */
+      }
+
+      .thumbnail {
+        position: relative;
+      }
+
+      .section-divider {
+        width: 2.5em;
+        height: 0.5em;
+        background-color: #732f2f;
+      }
+
+      section.top .content {
+        width: 100%;
+        max-width: 700px;
+        margin-left: 5em;
+      }
+
+      section.bottom-section {
+        display: flex;
+        padding: 3em;
+        justify-content: center;
+      }
+
+      section.bottom-section .content {
+        display: flex;
+        flex-direction: column;
+        max-width: 1400px;
+        gap: 2em;
+        flex: 1;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        /* Adjust as needed (left, right, center) */
+        white-space: nowrap;
+        /* Prevent text wrapping */
+      }
+
+      .section-header::after {
+        content: "";
+        flex-grow: 1;
+        height: 2px;
+        background-color: #e8e8e8;
+        /* Divider color */
+      }
+
+      .section-header::before {
+        margin-right: 10px;
+        /* Space between text and divider on left */
+      }
+
+      .section-header::after {
+        margin-left: 20px;
+        /* Space between text and divider on right */
+      }
+
+      .technology-card-container {
+        perspective: 2000px;
+        /* Creates the 3D depth. A higher number results in a shallower effect */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .technology-card {
+        display: flex;
+        border-radius: 10px;
+        border: #500000 2px solid;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        /* Ensures the card is at least 250px tall */
+        height: auto;
+        /* Allows the card to adjust based on the content */
+        transform-style: preserve-3d;
+
+        /* Ensures that child elements (image, text) are also part of the 3D effect */
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-in-out;
+        /* Smooth transition for transformations */
+      }
+
+      .technology-card .image {
+        width: 40%;
+        /* The image container will match the card's height */
+        /* Ensures the image doesn't exceed the card height */
+        overflow: hidden;
+        height: 250px;
+      }
+
+      .technology-card .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image covers the container nicely */
+      }
+
+      .technology-card .content {
+        gap: 0 !important;
+        padding: 1em;
+      }
+
+      .technology-card:hover {
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+        /* Increases the shadow to make the card feel more elevated */
+      }
+
+      @media (max-width: 768px) {
+        .technology-card {
           flex-direction: column;
-        }
-  
-        section.custom-page p {
-          font-family: "Open Sans", sans-serif !important;
-          font-size: 0.75em !important;
-          color: #797979;
-        }
-        /* end */
-
-        section.top{
-            background-color: #500000;
-            height: 400px;
-            display: flex;
-        }
-        section.top .content{
-            flex: 1
+          /* remove 3d */
+          transform-style: flat;
         }
 
-        .thumbnail{
-            width: 50%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            flex: 0.60;
-
+        .technology-card .image {
+          width: 100%;
+          height: 100px;
         }
-        .thumbnail img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .thumbnail::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 0;
-            border-left: 100px solid #500000; /* Adjust color and opacity as needed */
-            border-top: 400px solid transparent; /* Adjust height to match the .thumbnail height */
-        }
-        .thumbnail {
-            position: relative;
-        }
+      }
     </style>
     <section class="custom-page">
-        <section class="top">
+      <section class="top">
+        <div class="content-container">
+          <div class="content">
+            <h1>FACILITY</h1>
+            <div class="section-divider"></div>
+            <p>
+              Our lab is located in the <b>Emerging Technologies Building</b> in
+              room <b>ETB 2005B</b> at Texas A&M’s Main Campus.
+            </p>
+          </div>
+        </div>
+        <div class="thumbnail">
+          <img
+            src="https://images.unsplash.com/photo-1726715245558-69afa5ded798?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8"
+            alt="SAFELab Logo"
+          />
+        </div>
+      </section>
+      <section class="bottom-section">
+        <div class="content">
+          <h2 class="section-header">Technologies</h2>
+          <div class="technology-card-container">
+            <div class="technology-card">
+              <div class="image">
+                <img
+                  src="https://images.unsplash.com/photo-1721332154161-847851ea188b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+              </div>
+              <div class="content">
+                <h3>LS-DYNA</h3>
+                <p>
+                  LS-DYNA is a general-purpose finite element program capable of
+                  simulating complex real world problems. It is widely adopted
+                  across industries such as automobile, aerospace, construction,
+                  military, manufacturing, and bioengineering. The software’s
+                  vast array of potential applications is matched by its
+                  adaptability across various fields. In a given simulation, any
+                  combination of LS-DYNA’s features can model a wide range of
+                  physical events.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="technology-card">
+            <div class="image">
+              <img
+                src="https://images.unsplash.com/photo-1721332154161-847851ea188b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </div>
             <div class="content">
-test
+              <h3>LS-DYNA</h3>
+              <p>
+                LS-DYNA is a general-purpose finite element program capable of
+                simulating complex real world problems. It is widely adopted
+                across industries such as automobile, aerospace, construction,
+                military, manufacturing, and bioengineering. The software’s vast
+                array of potential applications is matched by its adaptability
+                across various fields. In a given simulation, any combination of
+                LS-DYNA’s features can model a wide range of physical events.
+              </p>
             </div>
-            <div class="thumbnail">
-                <img src="https://images.unsplash.com/photo-1726715245558-69afa5ded798?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8" alt="SAFELab Logo">
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </section>
-</body>
+
+    <script>
+      // Select all card elements
+      const cards = document.querySelectorAll(".technology-card");
+
+      // Apply event listeners to each card
+      cards.forEach((card) => {
+        // Add an event listener for when the mouse moves over the card
+        card.addEventListener("mousemove", (e) => {
+          const cardRect = card.getBoundingClientRect();
+          const x = e.clientX - cardRect.left; // X coordinate within the card
+          const y = e.clientY - cardRect.top; // Y coordinate within the card
+
+          const centerX = cardRect.width / 2;
+          const centerY = cardRect.height / 2;
+
+          const rotateX = ((y - centerY) / centerY) * 5; // Tilt on the X-axis
+          const rotateY = ((centerX - x) / centerX) * 8; // Tilt on the Y-axis
+
+          card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        // Add an event listener for when the mouse leaves the card
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "rotateX(0) rotateY(0)";
+        });
+      });
+    </script>
+  </body>
 </html>

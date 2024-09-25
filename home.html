@@ -134,7 +134,7 @@
       section.custom-page {
         display: flex;
         flex-direction: column;
-        overflow-y: hidden;
+        overflow: hidden;
       }
 
       section.custom-page p {
@@ -317,6 +317,7 @@
       /* Media query for mobile view */
       @media (max-width: 768px) {
         .bottom-section {
+          width: 100%;
           flex-direction: column; /* Change flex direction to column for mobile view */
           padding: 1em 1em !important;
         }
@@ -325,8 +326,19 @@
           padding: 0em 0em !important;
         }
 
+        .news-container .card {
+          gap: 1em;
+        }
+
+        .news-container .card .thumbnail {
+          flex: 1;
+        }
+
         .news-container .card div.content .description {
           display: none;
+        }
+
+        .news-container .card .content {
         }
       }
 
@@ -385,9 +397,22 @@
 
       .news-container .card img {
         width: 100%;
-        height: 70%;
+        height: 100%;
         object-fit: cover;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .news-container .card .thumbnail {
+        overflow: hidden;
+        width: 100%;
+        height: 70%;
+        margin: auto;
         border-radius: 8px;
+      }
+
+      .news-container .card:hover img {
+        /* I just want the image to zoom in */
+        transform: scale(1.05);
       }
 
       .featured-event__title > a {
@@ -402,7 +427,6 @@
         text-decoration: underline;
       }
     </style>
-
 
     <section class="custom-page">
       <section class="top-section">

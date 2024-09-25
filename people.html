@@ -1,328 +1,347 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SAFELab Website - People</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <defs>
-        <symbol id="icon-googlescholar" viewBox="0 0 48 48">
-          <path
-            fill="#1e88e5"
-            d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"
-          ></path>
-          <path
-            fill="#1565c0"
-            d="M35,16.592v-3.878L37,11H27l0.917,1.833c-1.236,0-2.265,0-2.265,0S19.095,13,19.095,18.748	c0,5.752,5.732,5.088,5.732,5.088s0,0.865,0,1.453c0,0.594,0.77,0.391,0.864,1.583c-0.388,0-7.964-0.208-7.964,4.998	s6.679,4.959,6.679,4.959s7.722,0.365,7.722-6.104c0-3.871-4.405-5.121-4.405-6.686c0-1.563,3.319-2.012,3.319-5.684	c0-0.823-0.028-1.524-0.149-2.12L34,13.571v3.02c-0.581,0.207-1,0.756-1,1.408v4.5c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5V18	C36,17.348,35.581,16.799,35,16.592z M30.047,31.169c0.131,2.024-1.929,3.811-4.603,3.998c-2.671,0.188-4.946-1.295-5.077-3.316	c-0.133-2.016,1.927-3.805,4.6-3.996C27.641,27.667,29.914,29.152,30.047,31.169z M26.109,22.453	c-1.592,0.451-3.375-1.062-3.982-3.367c-0.604-2.312,0.195-4.543,1.786-4.992c1.593-0.453,3.374,1.059,3.981,3.367	C28.499,19.77,27.702,22.004,26.109,22.453z"
-          ></path>
-          <path
-            fill="#e8eaf6"
-            d="M34,16.592V12c0-0.051-0.015-0.097-0.029-0.143L35,11H21l-9,8h5.383	c0.174,5.466,5.715,4.836,5.715,4.836s0,0.865,0,1.453c0,0.594,0.771,0.391,0.865,1.583c-0.388,0-7.964-0.208-7.964,4.998	s6.679,4.959,6.679,4.959s7.721,0.365,7.721-6.104c0-3.871-4.404-5.121-4.404-6.686c0-1.563,3.318-2.012,3.318-5.684	c0-0.971-0.047-1.763-0.232-2.422L33,12.667v3.925c-0.581,0.207-1,0.756-1,1.408v4.5c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5	V18C35,17.348,34.581,16.799,34,16.592z M28.319,31.169c0.131,2.024-1.928,3.811-4.602,3.998c-2.671,0.188-4.946-1.295-5.077-3.316	c-0.133-2.016,1.927-3.805,4.599-3.996C25.914,27.667,28.187,29.152,28.319,31.169z M24.38,22.453	c-1.591,0.451-3.373-1.062-3.981-3.367c-0.604-2.312,0.194-4.543,1.785-4.992c1.593-0.453,3.374,1.059,3.982,3.367	C26.77,19.77,25.973,22.004,24.38,22.453z"
-          ></path>
-        </symbol>
-      </defs>
-    </svg>
+<body>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet"
+  />
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <defs>
+      <symbol id="icon-googlescholar" viewBox="0 0 48 48">
+        <path
+          fill="#1e88e5"
+          d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"
+        ></path>
+        <path
+          fill="#1565c0"
+          d="M35,16.592v-3.878L37,11H27l0.917,1.833c-1.236,0-2.265,0-2.265,0S19.095,13,19.095,18.748	c0,5.752,5.732,5.088,5.732,5.088s0,0.865,0,1.453c0,0.594,0.77,0.391,0.864,1.583c-0.388,0-7.964-0.208-7.964,4.998	s6.679,4.959,6.679,4.959s7.722,0.365,7.722-6.104c0-3.871-4.405-5.121-4.405-6.686c0-1.563,3.319-2.012,3.319-5.684	c0-0.823-0.028-1.524-0.149-2.12L34,13.571v3.02c-0.581,0.207-1,0.756-1,1.408v4.5c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5V18	C36,17.348,35.581,16.799,35,16.592z M30.047,31.169c0.131,2.024-1.929,3.811-4.603,3.998c-2.671,0.188-4.946-1.295-5.077-3.316	c-0.133-2.016,1.927-3.805,4.6-3.996C27.641,27.667,29.914,29.152,30.047,31.169z M26.109,22.453	c-1.592,0.451-3.375-1.062-3.982-3.367c-0.604-2.312,0.195-4.543,1.786-4.992c1.593-0.453,3.374,1.059,3.981,3.367	C28.499,19.77,27.702,22.004,26.109,22.453z"
+        ></path>
+        <path
+          fill="#e8eaf6"
+          d="M34,16.592V12c0-0.051-0.015-0.097-0.029-0.143L35,11H21l-9,8h5.383	c0.174,5.466,5.715,4.836,5.715,4.836s0,0.865,0,1.453c0,0.594,0.771,0.391,0.865,1.583c-0.388,0-7.964-0.208-7.964,4.998	s6.679,4.959,6.679,4.959s7.721,0.365,7.721-6.104c0-3.871-4.404-5.121-4.404-6.686c0-1.563,3.318-2.012,3.318-5.684	c0-0.971-0.047-1.763-0.232-2.422L33,12.667v3.925c-0.581,0.207-1,0.756-1,1.408v4.5c0,0.829,0.672,1.5,1.5,1.5s1.5-0.671,1.5-1.5	V18C35,17.348,34.581,16.799,34,16.592z M28.319,31.169c0.131,2.024-1.928,3.811-4.602,3.998c-2.671,0.188-4.946-1.295-5.077-3.316	c-0.133-2.016,1.927-3.805,4.599-3.996C25.914,27.667,28.187,29.152,28.319,31.169z M24.38,22.453	c-1.591,0.451-3.373-1.062-3.981-3.367c-0.604-2.312,0.194-4.543,1.785-4.992c1.593-0.453,3.374,1.059,3.982,3.367	C26.77,19.77,25.973,22.004,24.38,22.453z"
+        ></path>
+      </symbol>
+    </defs>
+  </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <defs>
-        <symbol id="icon-linkedin" viewBox="0 0 48 48">
-          <path
-            fill="#0288D1"
-            d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"
-          ></path>
-          <path
-            fill="#FFF"
-            d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"
-          ></path>
-        </symbol>
-      </defs>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <defs>
+      <symbol id="icon-linkedin" viewBox="0 0 48 48">
+        <path
+          fill="#0288D1"
+          d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"
+        ></path>
+        <path
+          fill="#FFF"
+          d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"
+        ></path>
+      </symbol>
+    </defs>
+  </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <defs>
-        <symbol id="icon-email" viewBox="0 0 82 70">
-          <path
-            d="M20.6875 16C18.0996 16 16 18.0996 16 20.6875C16 22.1621 16.6934 23.5488 17.875 24.4375L39.125 40.375C40.2383 41.2051 41.7617 41.2051 42.875 40.375L64.125 24.4375C65.3066 23.5488 66 22.1621 66 20.6875C66 18.0996 63.9004 16 61.3125 16H20.6875ZM16 26.9375V47.25C16 50.6973 18.8027 53.5 22.25 53.5H59.75C63.1973 53.5 66 50.6973 66 47.25V26.9375L44.75 42.875C42.5234 44.5449 39.4766 44.5449 37.25 42.875L16 26.9375Z"
-          />
-        </symbol>
-      </defs>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <defs>
+      <symbol id="icon-email" viewBox="0 0 82 70">
+        <path
+          d="M20.6875 16C18.0996 16 16 18.0996 16 20.6875C16 22.1621 16.6934 23.5488 17.875 24.4375L39.125 40.375C40.2383 41.2051 41.7617 41.2051 42.875 40.375L64.125 24.4375C65.3066 23.5488 66 22.1621 66 20.6875C66 18.0996 63.9004 16 61.3125 16H20.6875ZM16 26.9375V47.25C16 50.6973 18.8027 53.5 22.25 53.5H59.75C63.1973 53.5 66 50.6973 66 47.25V26.9375L44.75 42.875C42.5234 44.5449 39.4766 44.5449 37.25 42.875L16 26.9375Z"
+        />
+      </symbol>
+    </defs>
+  </svg>
 
-    <style>
-      /* general css styling */
-      .custom-page {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: flex;
-        gap: 20px;
-      }
-
-      .section-divider {
-        width: 2.5em;
-        height: 0.5em;
-        background-color: #500000;
-      }
-
-      .custom-page h2 {
-        font-size: 2em !important;
-        font-family: "Oswald", sans-serif !important;
-        color: #500000 !important;
-        margin: 0;
-        font-weight: 400;
-      }
-      .custom-page h3 {
-        font-size: 1.25em !important;
-        font-family: "Oswald", sans-serif !important;
-        font-weight: 400 !important;
-        margin: 0;
-        color: #500000 !important;
-      }
-
-      section.custom-page {
-        display: flex;
-        flex-direction: column;
-      }
-
-      section.custom-page p {
-        font-family: "Open Sans", sans-serif !important;
-        font-size: 0.75em !important;
-        color: #797979;
-      }
-      /* end */
-      .cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-      }
-
-      .card {
-        width: 250px; /* Set a fixed width for the card */
-        background: white;
-        border-bottom: #732f2f 10px solid;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center the items for better alignment */
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
-      }
-
-      .card:hover {
-        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Increases the shadow to make the card feel more elevated */
-      }
-      /* css class for card hover but I want it to effect only the .headshot img */
-        .card:hover .headshot img {
-            /* I just want the image to zoom in */
-            transform: scale(1.05);
-        }
-
-      .headshot {
-        width: 100%; /* ensure the headshot container spans the full width */
-        height: 200px; /* Set a fixed height for the headshot */
-        background-color: #f0f0f0; /* Light grey background in case image fails to load */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      }
-
-      
-      .headshot img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Cover the area of the container without distorting the aspect ratio */
-        transition: transform 0.5s ease-in-out; /* Add a smooth transition effect */
+  <style>
+    /* general css styling */
+    .custom-page {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      gap: 20px;
     }
 
-      .card-content {
-        padding: 10px;
-        text-align: center;
-      }
+    .section-divider {
+      width: 2.5em;
+      height: 0.5em;
+      background-color: #500000;
+    }
 
-      .card-title {
-        margin-top: 10px;
-        font-size: 18px;
-        color: #333;
-      }
+    .custom-page h2 {
+      font-size: 2em !important;
+      font-family: "Oswald", sans-serif !important;
+      color: #500000 !important;
+      margin: 0;
+      font-weight: 400;
+    }
+    .custom-page h3 {
+      font-size: 1.25em !important;
+      font-family: "Oswald", sans-serif !important;
+      font-weight: 400 !important;
+      margin: 0;
+      color: #500000 !important;
+    }
 
-      .card-subtitle {
-        color: #666;
-        font-size: 14px;
-      }
+    section.custom-page {
+      display: flex;
+      flex-direction: column;
+    }
 
-      .divider {
-        width: 80%;
-        height: 1px;
-        background-color: #ccc;
-        margin: 10px auto; /* Center and add space above and below */
-      }
+    section.custom-page p {
+      font-family: "Open Sans", sans-serif !important;
+      font-size: 0.75em !important;
+      color: #797979;
+    }
+    /* end */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
 
-      .social-icons {
-        list-style: none;
-        padding: 0;
-        display: flex;
+    .card {
+      width: 250px; /* Set a fixed width for the card */
+      background: white;
+      border-bottom: #732f2f 10px solid;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center the items for better alignment */
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Increases the shadow to make the card feel more elevated */
+    }
+    /* css class for card hover but I want it to effect only the .headshot img */
+    .card:hover .headshot img {
+      /* I just want the image to zoom in */
+      transform: scale(1.05);
+    }
+
+    .headshot {
+      width: 100%; /* ensure the headshot container spans the full width */
+      height: 200px; /* Set a fixed height for the headshot */
+      background-color: #f0f0f0; /* Light grey background in case image fails to load */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .headshot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Cover the area of the container without distorting the aspect ratio */
+      transition: transform 0.5s ease-in-out; /* Add a smooth transition effect */
+    }
+
+    .card-content {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .card-title {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .card-subtitle {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .divider {
+      width: 80%;
+      height: 1px;
+      background-color: #ccc;
+      margin: 10px auto; /* Center and add space above and below */
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px; /* spacing between icons */
+    }
+
+    .icon-email {
+      padding: 0;
+      fill: #500000;
+    }
+
+    .social-icons svg:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .custom-page {
         justify-content: center;
-        align-items: center;
-        gap: 5px; /* spacing between icons */
+        width: auto;
       }
-
-      .icon-email {
-        padding: 0;
-        fill: #500000;
+      .card {
+        width: 256px;
       }
-
-      .social-icons svg:hover {
-        opacity: 0.5;
-        cursor: pointer;
+    }
+    /* responsive for mobile phones */
+    @media (max-width: 480px) {
+      .card-container {
+        width: 100%;
       }
-      @media (max-width: 768px) {
-        .custom-page {
-          justify-content: center;
-          width: auto;
-        }
-        .card {
-          width: 256px;
-        }
+      .card {
+        min-width: 100%;
+        transform-style: none; /* Disable 3D effect on mobile */
       }
-      /* responsive for mobile phones */
-      @media (max-width: 480px) {
-        .card-container {
-          width: 100%;
-        }
-        .card {
-          min-width: 100%;
-          transform-style: none; /* Disable 3D effect on mobile */
-        }
-      }
-    </style>
+    }
+  </style>
 
-    <section class="custom-page">
-      <div class="people-section">
-        <h2>Leadership</h2>
-        <div class="section-divider"></div>
-      </div>
+  <section class="custom-page">
+    <div class="people-section">
+      <h2>Leadership</h2>
+      <div class="section-divider"></div>
+    </div>
 
-      <section class="cards">
-        <div class="card-container">
-          <div class="card">
-            <div class="headshot">
-              <img
-                src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2016/11/Dr.-Currie-Gregg-e1726864327925.jpg"
-                alt="Headshot"
-              />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Dr. Nancy Currie-Gregg</h3>
-              <p class="card-subtitle">Director, Texas A&M Space Institute</p>
-              <div class="divider"></div>
-              <div class="social-icons">
-                <svg class="icon-email" width="40" height="40">
-                  <use xlink:href="#icon-email"></use>
-                </svg>
+    <section class="cards">
+      <div class="card-container">
+        <div class="card">
+          <div class="headshot">
+            <img
+              src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2016/11/Dr.-Currie-Gregg-e1726864327925.jpg"
+              alt="Headshot"
+            />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Dr. Nancy Currie-Gregg</h3>
+            <p class="card-subtitle">Director, Texas A&M Space Institute</p>
+            <div class="divider"></div>
+            <div class="social-icons">
+              <svg class="icon-email" width="40" height="40">
+                <use xlink:href="#icon-email"></use>
+              </svg>
 
-                <svg class="icon-linkedin" width="32" height="32">
-                  <use xlink:href="#icon-linkedin"></use>
-                </svg>
+              <svg class="icon-linkedin" width="32" height="32">
+                <use xlink:href="#icon-linkedin"></use>
+              </svg>
 
-                <svg class="icon-googlescholar" width="32" height="32">
-                  <use xlink:href="#icon-googlescholar"></use>
-                </svg>
-              </div>
+              <svg class="icon-googlescholar" width="32" height="32">
+                <use xlink:href="#icon-googlescholar"></use>
+              </svg>
             </div>
           </div>
         </div>
-      </section>
-
-      <div class="people-section">
-        <h2>Doctoral Students</h2>
-        <div class="section-divider"></div>
       </div>
-
-      <section class="cards">
-        <div class="card-container">
-          <div class="card">
-            <div class="headshot">
-              <img
-                src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2023/11/Srihari_headshot.jpeg"
-                alt="Headshot"
-              />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Srihari Menon</h3>
-              <p class="card-subtitle">Graduate Assistant Lecturer</p>
-              <div class="divider"></div>
-              <div class="social-icons">
-                <svg class="icon-email" width="40" height="40">
-                  <use xlink:href="#icon-email"></use>
-                </svg>
-
-                <svg class="icon-linkedin" width="32" height="32">
-                  <use xlink:href="#icon-linkedin"></use>
-                </svg>
-
-                <svg class="icon-googlescholar" width="32" height="32">
-                  <use xlink:href="#icon-googlescholar"></use>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-      <div class="people-section">
-        <h2>Undergraduate Students</h2>
-        <div class="section-divider"></div>
-      </div>
-
-      <section class="cards">
-
-        <div class="card-container">
-          <div class="card">
-            <div class="headshot">
-              <img
-                src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/09/1724014687534.jpeg"
-                alt="Headshot"
-              />
-            </div>
-            <div class="card-content">
-              <h3 class="card-title">Quenton Hua</h3>
-              <p class="card-subtitle">Undergraduate Student Researcher</p>
-              <div class="divider"></div>
-              <div class="social-icons">
-                <svg class="icon-email" width="40" height="40">
-                  <use xlink:href="#icon-email"></use>
-                </svg>
-
-                <svg class="icon-linkedin" width="32" height="32">
-                  <use xlink:href="#icon-linkedin"></use>
-                </svg>
-
-                <svg class="icon-googlescholar" width="32" height="32">
-                  <use xlink:href="#icon-googlescholar"></use>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </section>
 
-  </body>
-</html>
+    <div class="people-section">
+      <h2>Doctoral Students</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <section class="cards">
+      <div class="card-container">
+        <div class="card">
+          <div class="headshot">
+            <img
+              src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2023/11/Srihari_headshot.jpeg"
+              alt="Headshot"
+            />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Srihari Menon</h3>
+            <p class="card-subtitle">Graduate Assistant Lecturer</p>
+            <div class="divider"></div>
+            <div class="social-icons">
+              <svg class="icon-email" width="40" height="40">
+                <use xlink:href="#icon-email"></use>
+              </svg>
+
+              <svg class="icon-linkedin" width="32" height="32">
+                <use xlink:href="#icon-linkedin"></use>
+              </svg>
+
+              <svg class="icon-googlescholar" width="32" height="32">
+                <use xlink:href="#icon-googlescholar"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <div class="headshot">
+            <img
+              src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/09/HFES_Headshot-768x1024.jpg"
+              alt="Headshot"
+            />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">John Hayes</h3>
+            <p class="card-subtitle">Graduate Assistant Lecturer</p>
+            <div class="divider"></div>
+            <div class="social-icons">
+              <svg class="icon-email" width="40" height="40">
+                <use xlink:href="#icon-email"></use>
+              </svg>
+
+              <svg class="icon-linkedin" width="32" height="32">
+                <use xlink:href="#icon-linkedin"></use>
+              </svg>
+
+              <svg class="icon-googlescholar" width="32" height="32">
+                <use xlink:href="#icon-googlescholar"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="people-section">
+      <h2>Undergraduate Students</h2>
+      <div class="section-divider"></div>
+    </div>
+
+
+
+
+    <section class="cards">
+      <div class="card-container">
+        <div class="card">
+          <div class="headshot">
+            <img
+              src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/09/1724014687534.jpeg"
+              alt="Headshot"
+            />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Quenton Hua</h3>
+            <p class="card-subtitle">Undergraduate Student Researcher</p>
+            <div class="divider"></div>
+            <div class="social-icons">
+              <svg class="icon-email" width="40" height="40">
+                <use xlink:href="#icon-email"></use>
+              </svg>
+
+              <svg class="icon-linkedin" width="32" height="32">
+                <use xlink:href="#icon-linkedin"></use>
+              </svg>
+
+              <svg class="icon-googlescholar" width="32" height="32">
+                <use xlink:href="#icon-googlescholar"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</body>
