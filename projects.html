@@ -36,9 +36,12 @@
             font-weight: 400 !important;
             margin: 0;
             color: gray;
+            /* italicize */
+            font-style: italic;
         }
 
-        section.custom-page p {
+        section.custom-page p,
+        section.custom-page li {
             font-family: "Open Sans", sans-serif !important;
             font-size: 1em !important;
             color: #000000;
@@ -49,7 +52,7 @@
             flex-direction: column;
             align-items: center;
             overflow: hidden;
-            padding: 0 1em;
+            padding: 1em 2em;
             gap: 20px;
         }
 
@@ -108,7 +111,8 @@
         }
 
         .card:nth-child(odd) h2,
-        .card:nth-child(odd) p {
+        .card:nth-child(odd) p,
+        .card:nth-child(odd) li {
             color: white
         }
 
@@ -117,8 +121,8 @@
         }
 
         .card .thumbnail {
-            flex: 1;
-            height: 300px;
+            flex: 0.8;
+            position: relative;
             overflow: hidden;
             border-radius: 5px;
         }
@@ -131,7 +135,8 @@
         .card .content {
             padding: 0 2em;
             box-sizing: border-box;
-            flex: 1.6
+            flex: 1.6;
+            align-self: center;
         }
 
         .card .thumbnail img {
@@ -144,16 +149,47 @@
         .section-header {
             width: 100%;
             max-width: 1400px;
-            margin: 2em 0;
+
+        }
+
+
+        .custom-page .thumbnail .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            /* Black transparent background */
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            font-family: "Open Sans", sans-serif;
+
+        }
+
+        .custom-page .thumbnail:hover .caption {
+            opacity: 1;
         }
 
         @media (max-width: 768px) {
+
+            .custom-page {
+                padding: 1em 10px;
+            }
+
+            .card .thumbnail {
+                flex: none;
+                height: 200px !important;
+            }
 
             .card,
             .card:nth-child(odd) {
                 flex-direction: column;
                 padding: 0;
-           
+
             }
 
             .card {
@@ -161,14 +197,13 @@
             }
 
             .card .content {
-                padding: 1.5em 2em;
+                padding: 1.5em 1.25em;
             }
 
-
-            .technology-card .image {
-                width: 100%;
-                height: 100px;
+            .custom-page .thumbnail:hover .caption {
+                opacity: 0;
             }
+
         }
     </style>
 
@@ -180,48 +215,55 @@
         <section class="cards">
             <div class="card">
                 <div class="thumbnail">
-                    <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2021/04/Orion-Landing.jpg"
-                        alt="Office" />
+                    <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image.png" alt="Office" />
+
                 </div>
                 <div class="content">
-                    <h2>Spacecraft Occupant Protection</h2>
-                    <h3>Researchers: N/A</h3>
+                    <h2>Spacecraft Occupant Safety</h2>
+                    <h3>Researchers: Srihari Menon, Quenton Hua, Rami Ayari</h3>
                     <p>
-                        Spacecraft occupant protection entails computational analysis using finite element models of
-                        anthropomorphic test dummies or human body models integrated into aerospace seats and restraint
-                        systems. These models are an essential component of the suite of analytical methods that can be
-                        used to predict crew injury risk due to spacecraft dynamic loadings. Simulations of dynamic
-                        spacecraft acceleration events, such as landings, are performed with these numerical model to
-                        predict occupant injuries. Methods to reduce the transmission of injurious loads to the crew are
-                        explored in order to increase the safety of future spacecraft systems.
-
+                        Spacecraft occupants are subject to risk from dynamic loads during spaceflight. On average, 1
+                        out of 3 astronauts have been injured when landing back on Earth, and 9% have needed medical
+                        attention. As human spaceflight continues to expand and diversify, it is important to understand
+                        how spacecraft occupants sustain injuries in order to mitigate them.
                     </p>
+                    <p>
+                        In our ongoing investigations of spacecraft occupant safety, we:
+                    </p>
+                    <ul>
+                        <li>Use finite element human body models to computationally simulate dynamic responses of the
+                            human body to spaceflight loads.</li>
+                        <li>Study how spinal alignment and posture variation could affect injury outcomes.</li>
+                        <li>Evaluate how injury outcomes differ based on sex and anthropometry.</li>
+                        <li>Compare and validate finite element model responses to real-world data.</li>
+                        <li>Develop computational and software tools used for occupant injury risk prediction.</li>
+                    </ul>
                 </div>
+
             </div>
             <div class="card">
                 <div class="thumbnail">
-                    <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2021/04/EAA-Plane.jpeg"
+                    <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-1.png"
                         alt="Office" />
+                    <div class="caption">Causal knowledge graph of 4508 aviation accident reports pertaining to engine
+                        power loss. </div>
+                    <!-- Caption added -->
                 </div>
                 <div class="content">
-                    <h2>Causes of General Aviation Accidents</h2>
-                    <h3>Researchers: N/A</h3>
+                    <h2>General Aviation Accident Causal Analysis</h2>
+                    <h3>Researchers: Wyatt MGinnis, Sreesh K Reddy, Srihari Menon</h3>
                     <p>
-                        The Experimental Aircraft Association (EAA) sponsors an annual innovation competition aimed at
-                        engaging the General Aviation (GA) community to create novel solutions to long-standing safety
-                        challenges. For the past 5 years, the Founders Innovation Prize (FIP) has focused on Loss of
-                        Control (LOC) accidents – the leading cause of GA fatalities.
-                        In support of that thrust, and now addressing the next leading cause of GA fatalities – Loss of
-                        Power (LOP), a group of volunteers has taken a step back to create from first principles
-                        detailed causal models of the reasons why these fatalities occur. The aim of these modeling
-                        efforts is to deliver a complete, logic-based picture of all of the potential causes in the
-                        chain of events that lead to fatalities. The EAA published and presented in 2019 the findings
-                        from the Loss of Control modeling effort, delivering to the GA innovation community a broad
-                        picture of where “innovation space” exists – causes where there is not much innovation focus,
-                        but where potential solutions can alter the fatality rate significantly.
-                        Important to note is that the LOC and LOP models are theoretical, where all causes are equally
-                        weighted. 
+                        Every year, over one thousand fixed-wing general aviation accidents occur in the United States.
+                        At least 10% of these are fatal. At our lab, we attempt to study the causes of these accidents
+                        by:
                     </p>
+                    <ul>
+                        <li>Employing natural language processing to read through thousands of National Transport Safety
+                            Board investigations.</li>
+                        <li>Generating causal knowledge graphs to visualize causality, helping us zero in on the true
+                            root causes of accident trends.</li>
+                        <li>Developing software that can be used to query the NTSB database programmatically.</li>
+                    </ul>
                 </div>
             </div>
         </section>
