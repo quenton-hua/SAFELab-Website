@@ -354,6 +354,7 @@
         display: flex;
         margin: 3em 2em;
         max-width: 1400px;
+        width: 100%;
         min-height: 35em;
         align-self: center;
       }
@@ -473,12 +474,7 @@
         color: #5496ff !important;
       }
       /* I want a css class that adds a >> after the link */
-      .link-list p::after {
-        content: " »";
-        color: #5496ff;
-        /* i dont want an underline on this content */
-        text-decoration: none;
-      }
+
       .icon-announcement {
         fill: red;
       }
@@ -637,19 +633,19 @@
           <div class="carousel">
             <div class="carousel-slide">
               <img
-                src="https://images.unsplash.com/photo-1724009470445-dbb63ea06abb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0NXx8fGVufDB8fHx8fA%3D%3D"
+                src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-1.png"
                 alt="Slide 1"
               />
             </div>
             <div class="carousel-slide">
               <img
-                src="https://via.placeholder.com/1920x600/000000/FFFFFF?text=Slide+2"
+                src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-1.png"
                 alt="Slide 2"
               />
             </div>
             <div class="carousel-slide">
               <img
-                src="https://via.placeholder.com/1920x600/003366/FFFFFF?text=Slide+3"
+                src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-1.png"
                 alt="Slide 3"
               />
             </div>
@@ -696,7 +692,7 @@
               </svg>
               Research
             </h2>
-            <button>VIEW ALL RESEARCH <span class="arrow">»</span></button>
+            <a href="https://safe.engr.tamu.edu/projects/"><button>VIEW ALL RESEARCH <span class="arrow">»</span></button></a>
           </div>
 
           <section class="cards">
@@ -704,15 +700,20 @@
               <a class="card" href="https://www.google.com">
                 <div class="thumbnail">
                   <img
-                    src="https://images.unsplash.com/photo-1724009470445-dbb63ea06abb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0NXx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image.png" 
                     alt="Project Thumbnail"
                   />
                 </div>
                 <div class="card-content">
-                  <h3 class="card-title">Project Title 1</h3>
+                  <h3 class="card-title">Spacecraft Occupant Safety</h3>
                   <p class="card-description">
-                    A brief description of the project goes here. 1-2 lines that
-                    summarize the key idea.
+                    <p>
+                        Spacecraft occupants are subject to risk from dynamic loads during spaceflight. On average, 1
+                        out of 3 astronauts have been injured when landing back on Earth, and 9% have needed medical
+                        attention. As human spaceflight continues to expand and diversify, it is important to understand
+                        how spacecraft occupants sustain injuries in order to mitigate them.
+                    </p>
+   
                   </p>
                 </div>
               </a>
@@ -722,15 +723,15 @@
               <a class="card" href="https://www.google.com">
                 <div class="thumbnail">
                   <img
-                    src="https://images.unsplash.com/photo-1724009470445-dbb63ea06abb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0NXx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-1.png"
                     alt="Project Thumbnail"
                   />
                 </div>
                 <div class="card-content">
-                  <h3 class="card-title">Project Title 1</h3>
+                  <h3 class="card-title">General Aviation Accident Causal Analysis</h3>
                   <p class="card-description">
-                    A brief description of the project goes here. 1-2 lines that
-                    summarize the key idea.
+                    Every year, over one thousand fixed-wing general aviation accidents occur in the United States.
+                        At least 10% of these are fatal. At our lab, we attempt to study the causes of these accidents
                   </p>
                 </div>
               </a>
@@ -739,15 +740,14 @@
               <a class="card" href="https://www.google.com">
                 <div class="thumbnail">
                   <img
-                    src="https://images.unsplash.com/photo-1724009470445-dbb63ea06abb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0NXx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/6a22ca67-08dd-4f5c-af64-bb283d066851.png"
                     alt="Project Thumbnail"
                   />
                 </div>
                 <div class="card-content">
-                  <h3 class="card-title">Project Title 1</h3>
+                  <h3 class="card-title">Altered Gravity Ambulation</h3>
                   <p class="card-description">
-                    A brief description of the project goes here. 1-2 lines that
-                    summarize the key idea.
+                    Biomechanical analysis of gait and postural changes associated with walking at simulated lunar and Martian gravity.
                   </p>
                 </div>
               </a>
@@ -764,7 +764,7 @@
             </svg>
             News
           </h2>
-          <div class="content">
+          <!-- <div class="content">
             <div class="card">
               <div class="thumbnail">
                 <img
@@ -796,7 +796,7 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <div class="relevant-links-container">
@@ -809,8 +809,18 @@
           <div class="link-list link-list--leading">
             <ul>
               <li>
-                <a href="#"><p>Spacecraft Occupant Protection</p></a>
+                <a href="https://www.nasa.gov/wp-content/uploads/2019/06/jsc-hhp-occupantprotectiongroup.pdf?emrc=23aa38" target="_blank"><p>Spacecraft Occupant Protection</p></a>
               </li>
+              <li>
+                <a href="https://humanresearchroadmap.nasa.gov/" target="_blank"><p>NASA Human Space Research Roadmap</p></a>
+              </li>
+              <li>
+                <a href="https://www.eaa.org/eaa/pilots/safety-wire-articles/02-17-2017-faa-experimental-fatal-accident-dashboard" target="_blank"><p>EAA Aviation Accident Dashboard</p></a>
+              </li>
+              <li>
+                <a href="https://sma.nasa.gov/sma-disciplines/reliability-and-maintainability" target="_blank"><p>Reliability Engineering</p></a>
+              </li>
+              
             </ul>
           </div>
         </div>
