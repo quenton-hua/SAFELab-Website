@@ -1,315 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <defs>
-        <symbol id="icon-email" viewBox="0 0 82 70">
-          <path
-            d="M20.6875 16C18.0996 16 16 18.0996 16 20.6875C16 22.1621 16.6934 23.5488 17.875 24.4375L39.125 40.375C40.2383 41.2051 41.7617 41.2051 42.875 40.375L64.125 24.4375C65.3066 23.5488 66 22.1621 66 20.6875C66 18.0996 63.9004 16 61.3125 16H20.6875ZM16 26.9375V47.25C16 50.6973 18.8027 53.5 22.25 53.5H59.75C63.1973 53.5 66 50.6973 66 47.25V26.9375L44.75 42.875C42.5234 44.5449 39.4766 44.5449 37.25 42.875L16 26.9375Z"
-          />
-        </symbol>
-      </defs>
-    </svg>
 
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <defs>
-        <symbol id="icon-phone" viewBox="0 0 50 50">
-          <path
-            d="M16.1035 2.40235C15.3516 0.585942 13.3691 -0.380855 11.4746 0.136723L2.88086 2.48047C1.18164 2.94922 0 4.49219 0 6.25C0 30.4102 19.5898 50 43.75 50C45.5078 50 47.0508 48.8184 47.5195 47.1191L49.8633 38.5254C50.3809 36.6309 49.4141 34.6484 47.5977 33.8965L38.2227 29.9902C36.6309 29.3262 34.7852 29.7852 33.7012 31.1231L29.7559 35.9375C22.8809 32.6856 17.3145 27.1191 14.0625 20.2441L18.877 16.3086C20.2148 15.2148 20.6738 13.3789 20.0098 11.7871L16.1035 2.41211V2.40235Z"
-          />
-        </symbol>
-      </defs>
-    </svg>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <style>
-      .custom-page h2 {
-        font-size: 2em !important;
-        font-family: "Oswald", sans-serif !important;
-        color: #500000;
-        margin: 0;
-        font-weight: 400;
+<body>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet" />
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <defs>
+      <symbol id="icon-email" viewBox="0 0 82 70">
+        <path
+          d="M20.6875 16C18.0996 16 16 18.0996 16 20.6875C16 22.1621 16.6934 23.5488 17.875 24.4375L39.125 40.375C40.2383 41.2051 41.7617 41.2051 42.875 40.375L64.125 24.4375C65.3066 23.5488 66 22.1621 66 20.6875C66 18.0996 63.9004 16 61.3125 16H20.6875ZM16 26.9375V47.25C16 50.6973 18.8027 53.5 22.25 53.5H59.75C63.1973 53.5 66 50.6973 66 47.25V26.9375L44.75 42.875C42.5234 44.5449 39.4766 44.5449 37.25 42.875L16 26.9375Z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <defs>
+      <symbol id="icon-phone" viewBox="0 0 50 50">
+        <path
+          d="M16.1035 2.40235C15.3516 0.585942 13.3691 -0.380855 11.4746 0.136723L2.88086 2.48047C1.18164 2.94922 0 4.49219 0 6.25C0 30.4102 19.5898 50 43.75 50C45.5078 50 47.0508 48.8184 47.5195 47.1191L49.8633 38.5254C50.3809 36.6309 49.4141 34.6484 47.5977 33.8965L38.2227 29.9902C36.6309 29.3262 34.7852 29.7852 33.7012 31.1231L29.7559 35.9375C22.8809 32.6856 17.3145 27.1191 14.0625 20.2441L18.877 16.3086C20.2148 15.2148 20.6738 13.3789 20.0098 11.7871L16.1035 2.41211V2.40235Z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <style>
+    .custom-page h2 {
+      font-size: 2em !important;
+      font-family: "Oswald", sans-serif !important;
+      color: #500000;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .custom-page h3 {
+      font-size: 1.25em !important;
+      font-family: "Oswald", sans-serif !important;
+      font-weight: 400 !important;
+      margin: 0;
+      color: #500000;
+    }
+
+    section.custom-page {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      margin: 0 0 -1em 0;
+    }
+
+    section.custom-page p {
+      font-family: "Open Sans", sans-serif !important;
+      font-size: 1em !important;
+      color: #000000;
+    }
+
+    .custom-page>section {
+      display: flex;
+      margin: 0 0 3em 0;
+      max-width: 1400px;
+      /* The maximum width will be 1400px */
+      width: 100%;
+      /* The width will adjust based on the screen size */
+
+      align-self: center;
+      flex-grow: 1;
+      /* Allows the container to shrink and grow responsively */
+    }
+
+    .custom-page>section.contact {
+      margin: 0 2em;
+      display: block;
+      padding: 0em 1em;
+      box-sizing: border-box;
+      /* Includes padding in the width calculation */
+    }
+
+    .top-section>.content {
+      flex: 1;
+      padding: 0em;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+
+    }
+
+    .top-section {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-section .maps {
+      display: flex;
+
+      gap: 0.5em;
+      height: 400px;
+      padding: 1em;
+    }
+
+    .top-section iframe {
+      flex: 1;
+      border-radius: 5px;
+    }
+
+    .cards {
+
+      gap: 1em;
+      height: 200px;
+    }
+
+    .cards .card {
+      background-color: #500000;
+      display: flex;
+      padding: 1em;
+      border-radius: 25px;
+      height: 100%;
+    }
+
+    .cards .card .content {
+      padding: 2em 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cards .card p,
+    .cards .card h3 {
+      color: #fff;
+    }
+
+    .icon svg {
+      padding: 0;
+      fill: white;
+      height: 50px;
+      width: 50px;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+    }
+
+    .icon-email {
+      scale: 1.5;
+    }
+
+    .text {
+      padding: 1em;
+      flex: auto;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      /* Adjust as needed (left, right, center) */
+      white-space: nowrap;
+      /* Prevent text wrapping */
+    }
+
+    .section-header::after {
+      content: "";
+      flex-grow: 1;
+      height: 2px;
+      background-color: #e8e8e8;
+      /* Divider color */
+    }
+
+    .section-header::before {
+      margin-right: 10px;
+      /* Space between text and divider on left */
+    }
+
+    .section-header::after {
+      margin-left: 20px;
+      /* Space between text and divider on right */
+    }
+
+    @keyframes ring {
+      0% {
+        transform: rotate(0deg);
       }
 
-      .custom-page h3 {
-        font-size: 1.25em !important;
-        font-family: "Oswald", sans-serif !important;
-        font-weight: 400 !important;
-        margin: 0;
-        color: #500000;
+      10% {
+        transform: rotate(20deg);
       }
-      .custom-page {
-        display: flex;
+
+      20% {
+        transform: rotate(-20deg);
+      }
+
+      30% {
+        transform: rotate(15deg);
+      }
+
+      40% {
+        transform: rotate(-15deg);
+      }
+
+      50% {
+        transform: rotate(10deg);
+      }
+
+      60% {
+        transform: rotate(-10deg);
+      }
+
+      70% {
+        transform: rotate(5deg);
+      }
+
+      80% {
+        transform: rotate(-5deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    .card .icon-phone,
+    .card .icon-email {
+      transition: scale 0.3s ease-in-out;
+    }
+
+    .card:hover .icon-phone {
+      animation: ring 0.5s ease-in-out;
+
+      scale: 1.1;
+    }
+
+    .card:hover .icon-email {
+      scale: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .custom-page .top-section {
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        overflow: hidden;
-        padding: 0 1em;
-        gap: 20px;
-      }
-
-      section.custom-page p {
-        font-family: "Open Sans", sans-serif !important;
-        font-size: 1em !important;
-        color: #000000;
-      }
-
-      .custom-page > section {
-        display: flex;
-        margin: 3em 2em;
-        max-width: 1400px; /* The maximum width will be 1400px */
-        width: 100%; /* The width will adjust based on the screen size */
-
-        align-self: center;
-        flex-grow: 1; /* Allows the container to shrink and grow responsively */
-      }
-
-      .custom-page > section.contact {
-        margin: 0 2em;
-        display: block;
-        padding: 0em 1em;
-        box-sizing: border-box; /* Includes padding in the width calculation */
-      }
-      .top-section .content {
-        flex: 1;
-        padding: 2em;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .top-section {
-        margin: 2em 0;
+        padding: 0em;
         box-sizing: border-box;
+
+      }
+
+      .top-section .maps {
+        flex-direction: column;
+        width: 100%;
+        padding: 0em 0.5em;
+      }
+
+      .top-section>.content {
+        padding: 0 1em;
         display: flex;
         flex-direction: column;
-      }
-
-      .top-section .maps{
-        display: flex;
-
-        gap: 0.5em;
-        height: 300px;
-      }
-
-      .top-section iframe {
-        flex: 1;
-        border-radius: 5px;
       }
 
       .cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1em;
+        grid-template-columns: 1fr;
       }
 
-      .cards .card {
-        background-color: #500000;
-        display: flex;
-        padding: 1em;
-        border-radius: 25px;
+      .custom-page>section.contact {
+        margin: 0 2em !important;
       }
+    }
+  </style>
 
-      .cards .card .content {
-        padding: 2em 0;
-      }
+  <section class="custom-page">
+    <section class="top-section">
+      <div class="maps">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4595.445967459062!2d-96.34041883844489!3d30.62247114394677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864683946c56d813%3A0x96e3af8cff96f449!2sEmerging%20Technologies%20Building%20(ETB)!5e1!3m2!1sen!2sus!4v1727109748314!5m2!1sen!2sus"
+          width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-      .cards .card p,
-      .cards .card h3 {
-        color: #fff;
-      }
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.2826561844186!2d-96.34103543359275!3d30.61931335495322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86468396cc4eaaf3%3A0xff0cb9f3dca1a1aa!2sBright%20Building%20(HRBB)!5e1!3m2!1sen!2sus!4v1727886314471!5m2!1sen!2sus"
+          width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
 
-      .icon svg {
-        padding: 0;
-        fill: white;
-        height: 50px;
-        width: 50px;
-      }
 
-      .icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30%;
-      }
 
-      .icon-email {
-        scale: 1.5;
-      }
-
-      .text {
-        padding: 1em;
-        flex: auto;
-      }
-      .section-header {
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        /* Adjust as needed (left, right, center) */
-        white-space: nowrap;
-        /* Prevent text wrapping */
-      }
-
-      .section-header::after {
-        content: "";
-        flex-grow: 1;
-        height: 2px;
-        background-color: #e8e8e8;
-        /* Divider color */
-      }
-
-      .section-header::before {
-        margin-right: 10px;
-        /* Space between text and divider on left */
-      }
-
-      .section-header::after {
-        margin-left: 20px;
-        /* Space between text and divider on right */
-      }
-
-      @keyframes ring {
-        0% {
-          transform: rotate(0deg);
-        }
-        10% {
-          transform: rotate(20deg);
-        }
-        20% {
-          transform: rotate(-20deg);
-        }
-        30% {
-          transform: rotate(15deg);
-        }
-        40% {
-          transform: rotate(-15deg);
-        }
-        50% {
-          transform: rotate(10deg);
-        }
-        60% {
-          transform: rotate(-10deg);
-        }
-        70% {
-          transform: rotate(5deg);
-        }
-        80% {
-          transform: rotate(-5deg);
-        }
-        100% {
-          transform: rotate(0deg);
-        }
-      }
-
-      .card .icon-phone,
-      .card .icon-email {
-        transition: scale 0.3s ease-in-out;
-      }
-
-      .card:hover .icon-phone {
-        animation: ring 0.5s ease-in-out;
-
-        scale: 1.1;
-      }
-
-      .card:hover .icon-email {
-        scale: 1.7;
-      }
-
-      @media (max-width: 768px) {
-        .top-section {
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          margin: 2em;
-        }
-
-        .top-section .maps {
-          flex-direction: column;
-          width: 100%;
-        }
-
-        .top-section .content {
-          padding: 0em;
-        }
-
-        .cards {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
-
-    <section class="custom-page">
-      <section class="top-section">
-        <div class="maps">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4595.445967459062!2d-96.34041883844489!3d30.62247114394677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864683946c56d813%3A0x96e3af8cff96f449!2sEmerging%20Technologies%20Building%20(ETB)!5e1!3m2!1sen!2sus!4v1727109748314!5m2!1sen!2sus"
-            width="100%"
-            height="100%"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.2826561844186!2d-96.34103543359275!3d30.61931335495322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86468396cc4eaaf3%3A0xff0cb9f3dca1a1aa!2sBright%20Building%20(HRBB)!5e1!3m2!1sen!2sus!4v1727886314471!5m2!1sen!2sus"
-            width="100%"
-            height="100%"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+      <div class="content">
+        <div class="text">
+          <h2>Visit our Lab</h2>
+          <p>
+            The SAFE Laboratory is located at Texas A&M University's main campus in College Station, TX, with facilities
+            in the Emerging Technologies Building (ETB 2005B) and the Bright Building (HRBB 134).
+          </p>
         </div>
 
-
-
-        <div class="content">
-          <div class="text">
-            <h2>Visit our Lab</h2>
-            <p>
-              The SAFE Laboratory is located at Texas A&M’s main campus in
-              College Station, TX in the Emerging Technologies Building (ETB
-              2005B).
-            </p>
-          </div>
-
-          <div class="cards">
-            <div class="card">
-              <div class="icon">
-                <svg class="icon-email">
-                  <use xlink:href="#icon-email"></use>
-                </svg>
-              </div>
-              <div class="content">
-                <h3>Mailing Address</h3>
-                <p>Random address 104 College Station, TX</p>
-              </div>
+        <div class="cards">
+          <div class="card">
+            <div class="icon">
+              <svg class="icon-email">
+                <use xlink:href="#icon-email"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <h3>Mailing Address</h3>
+              <p>101 Bizzell St, College Station, TX 77843</p>
             </div>
           </div>
         </div>
-      </section>
-      <section class="contact">
-        <div>
-          <h2 class="section-header">Contact Us</h2>
-        </div>
-      </section>
+      </div>
     </section>
-  </body>
+    <section class="contact">
+      <div>
+        <h2 class="section-header">Contact Us</h2>
+      </div>
+    </section>
+  </section>
+</body>
+
 </html>

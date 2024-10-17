@@ -109,6 +109,40 @@
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
 
+    .leadership-card{
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-bottom: #732f2f 10px solid;
+    }
+
+    .leadership-card .card-content{
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      text-align: left;
+      padding: 1em;
+    }
+
+    .leadership-card .headshot{
+      width: 300px;
+    }
+
+
+    .leadership-card .social-icons {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: left;
+      gap: 5px;
+      /* spacing between icons */
+    }
+
+    .leadership-card .divider{
+      margin: 10px 0;
+    }
+
     .card:hover {
       box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
       /* Increases the shadow to make the card feel more elevated */
@@ -123,7 +157,7 @@
     .headshot {
       width: 100%;
       /* ensure the headshot container spans the full width */
-      height: 200px;
+      aspect-ratio: 1/1;
       /* Set a fixed height for the headshot */
       background-color: #f0f0f0;
       /* Light grey background in case image fails to load */
@@ -218,6 +252,31 @@
       background-color: #732f2f;
     }
 
+    .classes-container{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .classes-container p{
+      margin: 0.5em 0;
+    }
+
+
+    .classes-container > div{
+      
+      
+
+    }
+
+    .classes-container h4{
+      font-size: 1.15em;
+      font-weight: 400;
+      font-family: "Oswald";
+      margin: 0;
+      color: #500000;
+    }
+
+
     @media (max-width: 768px) {
       .custom-page {
         justify-content: center;
@@ -250,7 +309,7 @@
 
     <section class="cards">
       <div class="card-container">
-        <div class="card">
+        <div class="leadership-card">
           <div class="headshot">
             <img
               src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2016/11/Dr.-Currie-Gregg-e1726864327925.jpg"
@@ -259,6 +318,17 @@
           <div class="card-content">
             <h3 class="card-title">Dr. Nancy Currie-Gregg</h3>
             <p class="card-subtitle">Director, Texas A&M Space Institute <br> Professor of Practice, ISEN & AERO</p>
+            <div class="classes-container">
+              <div>
+                <h4>Graduate Classes</h4>
+                <p>ISEN 123, ISEN 232</p>
+              </div>
+              <div>
+                <h4>Undergraduate Classes</h4>
+                <p>ISEN 123, ISEN 232</p>
+              </div>
+            </div>
+
             <div class="divider"></div>
             <div class="social-icons">
               <a href="mailto:currie-gregg@tamu.edu" title="currie-gregg@tamu.edu" target="_top">

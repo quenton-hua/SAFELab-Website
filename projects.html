@@ -91,7 +91,7 @@
             width: 100%;
             max-width: 1400px;
             box-sizing: border-box;
-            gap: 20px;
+            gap: 1em;
         }
 
         .card {
@@ -121,7 +121,9 @@
         }
 
         .card .thumbnail {
-            flex: 0.8;
+            align-self: center;
+            width: 40%;
+            max-height: 300px;
             position: relative;
             overflow: hidden;
             border-radius: 5px;
@@ -183,6 +185,7 @@
             .card .thumbnail {
                 flex: none;
                 height: 200px !important;
+                width: 100%;
             }
 
             .card,
@@ -213,9 +216,10 @@
             <div class="section-divider"></div>
         </div>
         <section class="cards">
-            <div class="card">
+            <div class="card" id="1">
                 <div class="thumbnail">
-                    <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image.png" alt="Office" />
+                    <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-2-e1728951144876.png"
+                        alt="Office" />
 
                 </div>
                 <div class="content">
@@ -241,7 +245,7 @@
                 </div>
 
             </div>
-            <div class="card">
+            <div class="card" id="2">
                 <div class="thumbnail">
                     <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-1.png"
                         alt="Office" />
@@ -264,6 +268,22 @@
                             root causes of accident trends.</li>
                         <li>Developing software that can be used to query the NTSB database programmatically.</li>
                     </ul>
+                </div>
+            </div>
+
+            <div class="card" id="3">
+                <div class="thumbnail">
+                    <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/6a22ca67-08dd-4f5c-af64-bb283d066851.png"
+                        alt="thumbnail" />
+                    <!-- <div class="caption">Causal knowledge graph of 4508 aviation accident reports pertaining to engine
+                        power loss. </div> -->
+                    <!-- Caption added -->
+                </div>
+                <div class="content">
+                    <h2>Altered Gravity Ambulation</h2>
+                    <h3>Researchers: John Hayes</h3>
+                    <p>Biomechanical analysis of gait and postural changes associated with walking at simulated lunar
+                        and Martian gravity.</p>
                 </div>
             </div>
         </section>
