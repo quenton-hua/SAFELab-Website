@@ -1,449 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAFELab Facility</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SAFELab Facility</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
-    rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <style>
-    /* general css styling */
-    .custom-page {
-      width: 100%;
-      display: flex;
-      gap: 20px;
-    }
-
-    .section-divider {
-      width: 2.5em;
-      height: 0.5em;
-      background-color: #500000;
-    }
-
-    .custom-page h1 {
-      font-size: 2.25em !important;
-      font-family: "Oswald", sans-serif !important;
-      color: #ffffff !important;
-      margin: 0;
-      font-weight: 300;
-    }
-
-    .custom-page h2 {
-      font-size: 2em !important;
-      font-family: "Oswald", sans-serif !important;
-      color: #500000 !important;
-      margin: 0;
-      font-weight: 400;
-    }
-
-    .custom-page h3 {
-      font-size: 1.25em !important;
-      /* use work sans */
-
-      font-family: "Work Sans", sans-serif !important;
-      font-weight: bold;
-      margin: 0;
-      color: #500000 !important;
-    }
-
-    .custom-page a {
-      color: #500000;
-    }
-
-    section.custom-page {
-      display: flex;
-      flex-direction: column;
-      overflow-y: hidden;
-    }
-
-    section.custom-page p {
-      font-family: "Open Sans", sans-serif !important;
-      font-size: 1em !important;
-      color: #000000;
-    }
-
-    section.custom-page .top p {
-      font-family: "Open Sans", sans-serif !important;
-      font-size: 1em !important;
-      color: #ffffff;
-    }
-
-    /* end */
-
-    section.top {
-      background-color: #500000;
-      height: 400px;
-      display: flex;
-    }
-
-    section.top .content-container {
-      display: flex;
-      flex: 1;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .thumbnail {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      flex: 0.6;
-    }
-
-    .thumbnail img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .thumbnail::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 0;
-      border-left: 100px solid #500000;
-      /* Adjust color and opacity as needed */
-      border-bottom: 400px solid transparent;
-      /* Adjust height to match the .thumbnail height */
-    }
-
-    .thumbnail {
-      position: relative;
-    }
-
-    .section-divider {
-      width: 2.5em;
-      height: 0.5em;
-      background-color: #732f2f;
-    }
-
-    section.top .content {
-      width: 100%;
-      max-width: 700px;
-      margin-left: 5em;
-    }
-
-    section.bottom-section {
-      display: flex;
-      padding: 1em;
-      justify-content: center;
-    }
-
-    section.bottom-section .content {
-      display: flex;
-      flex-direction: column;
-      max-width: 1400px;
-      gap: 2em;
-      flex: 1;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      /* Adjust as needed (left, right, center) */
-      white-space: nowrap;
-      /* Prevent text wrapping */
-    }
-
-    .section-header::after {
-      content: "";
-      flex-grow: 1;
-      height: 2px;
-      background-color: #e8e8e8;
-      /* Divider color */
-    }
-
-    .section-header::before {
-      margin-right: 10px;
-      /* Space between text and divider on left */
-    }
-
-    .section-header::after {
-      margin-left: 20px;
-      /* Space between text and divider on right */
-    }
-
-    .technology-card-container {
-      perspective: 2000px;
-      /* Creates the 3D depth. A higher number results in a shallower effect */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .technology-card {
-      display: flex;
-      border-radius: 10px;
-      border: #500000 2px solid;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      align-items: center;
-      /* Ensures the card is at least 250px tall */
-      height: auto;
-      /* Allows the card to adjust based on the content */
-      transform-style: preserve-3d;
-      width: 100%;
-      /* Ensures that child elements (image, text) are also part of the 3D effect */
-      transition: transform 0.3s ease-out, box-shadow 0.3s ease-in-out;
-      /* Smooth transition for transformations */
-      overflow: hidden;
-    }
-
-    .technology-card .image {
-      width: 40%;
-      /* The image container will match the card's height */
-      /* Ensures the image doesn't exceed the card height */
-      overflow: hidden;
-      height: 250px;
-    }
-
-    .technology-card .image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      /* Ensures the image covers the container nicely */
-    }
-
-    .technology-card .content {
-      gap: 0 !important;
-      padding: 1em;
-    }
-
-    .technology-card:hover {
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
-      /* Increases the shadow to make the card feel more elevated */
-    }
-
-    @media (max-width: 768px) {
-      .technology-card {
-        flex-direction: column;
-        /* remove 3d */
-        transform-style: flat;
+  <body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* general css styling */
+      .custom-page {
+        width: 100%;
+        display: flex;
+        gap: 20px;
       }
 
-      .technology-card .image {
+      .section-divider {
+        width: 2.5em;
+        height: 0.5em;
+        background-color: #500000;
+      }
+
+      .custom-page h1 {
+        font-size: 2.25em !important;
+        font-family: "Oswald", sans-serif !important;
+        color: #ffffff !important;
+        margin: 0;
+        font-weight: 300;
+      }
+
+      .custom-page h2 {
+        font-size: 2em !important;
+        font-family: "Oswald", sans-serif !important;
+        color: #500000 !important;
+        margin: 0;
+        font-weight: 400;
+      }
+
+      .custom-page h3 {
+        font-size: 1.25em !important;
+        /* use work sans */
+
+        font-family: "Work Sans", sans-serif !important;
+        font-weight: bold;
+        margin: 0;
+        color: #500000 !important;
+      }
+
+      .custom-page a {
+        color: #500000;
+      }
+
+      section.custom-page {
+        display: flex;
+        flex-direction: column;
+        overflow-y: hidden;
+      }
+
+      section.custom-page p {
+        font-family: "Open Sans", sans-serif !important;
+        font-size: 1em !important;
+        color: #000000;
+      }
+
+      section.custom-page .top p {
+        font-family: "Open Sans", sans-serif !important;
+        font-size: 1em !important;
+        color: #ffffff;
+      }
+
+      /* end */
+
+      section.top {
+        background-color: #500000;
+        height: 400px;
+        display: flex;
+      }
+
+      section.top .content-container {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .thumbnail {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        flex: 0.6;
+      }
+
+      .thumbnail img {
         width: 100%;
-        height: 100px;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .thumbnail::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 100px solid #500000;
+        /* Adjust color and opacity as needed */
+        border-bottom: 400px solid transparent;
+        /* Adjust height to match the .thumbnail height */
+      }
+
+      .thumbnail {
+        position: relative;
+      }
+
+      .section-divider {
+        width: 2.5em;
+        height: 0.5em;
+        background-color: #732f2f;
       }
 
       section.top .content {
         width: 100%;
         max-width: 700px;
-        margin-left: 2em;
+        margin-left: 5em;
       }
-    }
-  </style>
-  <section class="custom-page">
-    <section class="top">
-      <div class="content-container">
+
+      section.bottom-section {
+        display: flex;
+        padding: 1em;
+        justify-content: center;
+      }
+
+      section.bottom-section .content {
+        display: flex;
+        flex-direction: column;
+        max-width: 1400px;
+        gap: 2em;
+        flex: 1;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        /* Adjust as needed (left, right, center) */
+        white-space: nowrap;
+        /* Prevent text wrapping */
+      }
+
+      .section-header::after {
+        content: "";
+        flex-grow: 1;
+        height: 2px;
+        background-color: #e8e8e8;
+        /* Divider color */
+      }
+
+      .section-header::before {
+        margin-right: 10px;
+        /* Space between text and divider on left */
+      }
+
+      .section-header::after {
+        margin-left: 20px;
+        /* Space between text and divider on right */
+      }
+
+      .technology-card-container {
+        perspective: 2000px;
+        /* Creates the 3D depth. A higher number results in a shallower effect */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .technology-card {
+        display: flex;
+        border-radius: 10px;
+        border: #500000 2px solid;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        /* Ensures the card is at least 250px tall */
+        height: auto;
+        /* Allows the card to adjust based on the content */
+        transform-style: preserve-3d;
+        width: 100%;
+        /* Ensures that child elements (image, text) are also part of the 3D effect */
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-in-out;
+        /* Smooth transition for transformations */
+        overflow: hidden;
+      }
+
+      .technology-card .image {
+        width: 40%;
+        /* The image container will match the card's height */
+        /* Ensures the image doesn't exceed the card height */
+        overflow: hidden;
+        height: 250px;
+      }
+
+      .technology-card .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image covers the container nicely */
+      }
+
+      .technology-card .content {
+        gap: 0 !important;
+        padding: 1em;
+      }
+
+      .technology-card:hover {
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+        /* Increases the shadow to make the card feel more elevated */
+      }
+
+      @media (max-width: 768px) {
+        .technology-card {
+          flex-direction: column;
+          /* remove 3d */
+          transform-style: flat;
+        }
+
+        .technology-card .image {
+          width: 100%;
+          height: 100px;
+        }
+
+        section.top .content {
+          width: 100%;
+          max-width: 700px;
+          margin-left: 2em;
+        }
+      }
+    </style>
+    <section class="custom-page">
+      <section class="top">
+        <div class="content-container">
+          <div class="content">
+            <h1>FACILITY</h1>
+            <div class="section-divider"></div>
+            <p>
+              Our labs are located in the Emerging Technologies Building (ETB
+              2005B) and the Bright Building (HRBB 134).
+            </p>
+          </div>
+        </div>
+        <div class="thumbnail">
+          <img
+            src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2021/04/etb-building.jpg"
+            alt="SAFELab Logo"
+          />
+        </div>
+      </section>
+      <section class="bottom-section">
         <div class="content">
-          <h1>FACILITY</h1>
-          <div class="section-divider"></div>
-          <p>
-            Our labs are located in the Emerging Technologies Building (ETB 2005B) and the Bright Building (HRBB 134).
-          </p>
+          <h2 class="section-header">Technologies</h2>
+
+          <div class="technology-card-container">
+            <div class="technology-card">
+              <div class="image">
+                <img
+                  src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/unnamed-scaled.jpg"
+                />
+              </div>
+              <div class="content">
+                <a href="https://varjo.com/products/xr-4/" target="_blank">
+                  <h3>Eight360 - NOVA</h3>
+                </a>
+                <p>
+                  NOVA is a “virtual vehicle” - able to put you inside a
+                  realistic VR environment, but also recreate the necessary
+                  sensations to go with it. Combining the latest in immersive
+                  reality systems with a unique design allowing full 360 flips
+                  and spins, the platform delivers a more immersive and visceral
+                  experience, leading to better engagement and learning
+                  outcomes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="technology-card-container">
+            <div class="technology-card">
+              <div class="image">
+                <img
+                  src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/Ultium-Motion-with-Receiver-transparent-1200x1200-1.png"
+                />
+              </div>
+              <div class="content">
+                <a
+                  href="https://www.noraxon.com/our-products/ultium-motion/"
+                  target="_blank"
+                >
+                  <h3>Noraxon IMU</h3>
+                </a>
+                <p>
+                  The Ultium Motion system by Noraxon is a wearable 3D motion
+                  capture technology that provides precise kinematic
+                  measurements for various movements, even in high-velocity and
+                  high-impact conditions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="technology-card-container">
+            <div class="technology-card">
+              <div class="image">
+                <img
+                  src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/GFX5309-1024x796-1-e1728712304706.jpg"
+                />
+              </div>
+              <div class="content">
+                <a
+                  href="https://boosttreadmills.com/the-boost-2/"
+                  target="_blank"
+                >
+                  <h3>The Boost 2 Microgravity Treadmill</h3>
+                </a>
+                <p>
+                  The Boost 2 Microgravity Treadmill is designed for athletes
+                  and physiotherapy patients, offering the ability to adjust
+                  body weight between 20-100% for enhanced performance and
+                  recovery. It features a motorized lift system, intuitive
+                  controls, and multiple gait views for clinicians and trainers,
+                  making it a versatile tool for training and rehabilitation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="technology-card-container">
+            <div class="technology-card">
+              <div class="image">
+                <img
+                  src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/medilogic-insoles.jpg"
+                />
+              </div>
+              <div class="content">
+                <a
+                  href="https://www.noraxon.com/our-products/insole-smartlead"
+                  target="_blank"
+                >
+                  <h3>Ultium Insoles</h3>
+                </a>
+                <p>
+                  The Ultium Insole SmartLead offers Ultium users an accessible
+                  solution for measuring contact detection, impact
+                  characteristics, and load distribution during dynamic
+                  activities like running and gait analysis. It provides data on
+                  static and dynamic loading asymmetry, balance, and body sway.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="technology-card-container">
+            <div class="technology-card">
+              <div class="image">
+                <img
+                  src="        https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/XR-4_FocalEdition_FrontRight_GreyBG_1920x1120__19439.png
+              "
+                />
+              </div>
+              <div class="content">
+                <a href="https://varjo.com/products/xr-4/" target="_blank">
+                  <h3>Varjo XR-4</h3>
+                </a>
+                <p>
+                  The Varjo XR-4 provides an unparalleled mixed reality
+                  experience, offering photorealistic visuals and the widest
+                  field of view available in any XR headset. It is integrated
+                  with NOVA and includes advanced eye-tracking technology, which
+                  is heavily utilized with our simulator.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="technology-card-container">
+            <div class="technology-card">
+              <div class="image">
+                <img
+                  src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/ls-dyna-3demi-1.png"
+                />
+              </div>
+              <div class="content">
+                <a href="https://lsdyna.ansys.com/" target="_blank">
+                  <h3>LS-DYNA</h3>
+                </a>
+                <p>
+                  LS-DYNA is a general-purpose finite element program capable of
+                  simulating complex real world problems. It is widely adopted
+                  across industries such as automobile, aerospace, construction,
+                  military, manufacturing, and bioengineering. The software’s
+                  vast array of potential applications is matched by its
+                  adaptability across various fields. In a given simulation, any
+                  combination of LS-DYNA’s features can model a wide range of
+                  physical events.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="technology-card-container">
+            <div class="technology-card">
+              <div class="image">
+                <img
+                  src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/oasys.png"
+                />
+              </div>
+              <div class="content">
+                <a href="https://www.oasys-software.com/dyna/" target="_blank">
+                  <h3>Oasys LS-DYNA</h3>
+                </a>
+                <p>
+                  The Oasys LS-DYNA Environment is both versatile and
+                  tailor-made. Benefit from pre- and post-processing software
+                  designed specially to work with LS-DYNA, and turn it towards a
+                  host of different applications.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="technology-card-container">
+            <div class="technology-card">
+              <div class="image">
+                <img
+                  src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/space-teams.png"
+                />
+              </div>
+              <div class="content">
+                <a href="https://www.eight360.com/" target="_blank">
+                  <h3>SpaceTeamsPRO</h3>
+                </a>
+                <p>
+                  The Space Teams Platform for Research and Operations (PRO),
+                  developed at the Texas A&M ASTRO Lab & SimDynamX LLC, is a
+                  platform made for large scale engineering system design,
+                  integration and collaboration. It is a Virtual Reality
+                  'Sandbox' environment designed to enable students, government
+                  and commercial entities to collaborate, design, evaluate and
+                  experience technology, to simulate and evaluate space system
+                  architectures.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="thumbnail">
-        <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2021/04/etb-building.jpg"
-          alt="SAFELab Logo" />
-      </div>
+      </section>
     </section>
-    <section class="bottom-section">
-      <div class="content">
-        <h2 class="section-header">Technologies</h2>
 
-        <div class="technology-card-container">
-          <div class="technology-card">
-            <div class="image">
-              <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/unnamed-scaled.jpg" />
-            </div>
-            <div class="content">
-              <a href="https://varjo.com/products/xr-4/" target="_blank">
-                <h3>Eight360 - NOVA</h3>
-              </a>
-              <p>
-                NOVA is a “virtual vehicle” - able to put you inside a realistic VR environment, but also recreate the
-                necessary sensations to go with it. Combining the latest in immersive reality systems with a unique
-                design allowing full 360 flips and spins, the platform delivers a more immersive and visceral
-                experience, leading to better engagement and learning outcomes.
-              </p>
-            </div>
-          </div>
-        </div>
+    <script>
+      // Select all card elements
+      const cards = document.querySelectorAll(".technology-card");
 
+      // Apply event listeners to each card
+      cards.forEach((card) => {
+        // Add an event listener for when the mouse moves over the card
+        card.addEventListener("mousemove", (e) => {
+          const cardRect = card.getBoundingClientRect();
+          const x = e.clientX - cardRect.left; // X coordinate within the card
+          const y = e.clientY - cardRect.top; // Y coordinate within the card
 
-        <div class="technology-card-container">
-          <div class="technology-card">
-            <div class="image">
-              <img
-                src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/GFX5309-1024x796-1-e1728712304706.jpg" />
-            </div>
-            <div class="content">
-              <a href="https://boosttreadmills.com/the-boost-2/" target="_blank">
-                <h3>The Boost 2 Microgravity Treadmill</h3>
-              </a>
-              <p>
-                The Boost 2 Microgravity Treadmill is designed for athletes and physiotherapy patients, offering the
-                ability to adjust body weight between 20-100% for enhanced performance and recovery. It features a
-                motorized lift system, intuitive controls, and multiple gait views for clinicians and trainers, making
-                it a versatile tool for training and rehabilitation.
-              </p>
-            </div>
-          </div>
-        </div>
+          const centerX = cardRect.width / 2;
+          const centerY = cardRect.height / 2;
 
-        <div class="technology-card-container">
-          <div class="technology-card">
-            <div class="image">
-              <img src="        https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/XR-4_FocalEdition_FrontRight_GreyBG_1920x1120__19439.png
-              " />
-            </div>
-            <div class="content">
-              <a href="https://varjo.com/products/xr-4/" target="_blank">
-                <h3>Varjo XR-4</h3>
-              </a>
-              <p>
-                The Varjo XR-4 provides an unparalleled mixed reality experience, offering photorealistic visuals and
-                the widest field of view available in any XR headset. It is integrated with NOVA and includes advanced
-                eye-tracking technology, which is heavily utilized with our simulator.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="technology-card-container">
-          <div class="technology-card">
-            <div class="image">
-              <img
-                src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/Ultium-Motion-with-Receiver-transparent-1200x1200-1.png" />
-            </div>
-            <div class="content">
-              <a href="https://www.noraxon.com/our-products/ultium-motion/" target="_blank">
-                <h3>Noraxon IMU</h3>
-              </a>
-              <p>
-                The Ultium Motion system by Noraxon is a wearable 3D motion capture technology that provides precise
-                kinematic measurements for various movements, even in high-velocity and high-impact conditions.
-              </p>
-            </div>
-          </div>
-        </div>
+          const rotateX = ((y - centerY) / centerY) * 5; // Tilt on the X-axis
+          const rotateY = ((centerX - x) / centerX) * 8; // Tilt on the Y-axis
 
+          card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
 
-        <div class="technology-card-container">
-          <div class="technology-card">
-            <div class="image">
-              <img
-                src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/medilogic-insoles.jpg" />
-            </div>
-            <div class="content">
-              <a href="https://www.noraxon.com/our-products/insole-smartlead" target="_blank">
-                <h3>Ultium Insoles</h3>
-              </a>
-              <p>
-                The Ultium Insole SmartLead offers Ultium users an accessible solution for measuring contact detection,
-                impact characteristics, and load distribution during dynamic activities like running and gait analysis.
-                It provides data on static and dynamic loading asymmetry, balance, and body sway.
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="technology-card-container">
-          <div class="technology-card">
-            <div class="image">
-              <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/ls-dyna-3demi-1.png" />
-            </div>
-            <div class="content">
-              <a href="https://lsdyna.ansys.com/" target="_blank">
-                <h3>LS-DYNA</h3>
-              </a>
-              <p>
-                LS-DYNA is a general-purpose finite element program capable of
-                simulating complex real world problems. It is widely adopted
-                across industries such as automobile, aerospace, construction,
-                military, manufacturing, and bioengineering. The software’s
-                vast array of potential applications is matched by its
-                adaptability across various fields. In a given simulation, any
-                combination of LS-DYNA’s features can model a wide range of
-                physical events.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="technology-card-container">
-          <div class="technology-card">
-            <div class="image">
-              <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/space-teams.png" />
-            </div>
-            <div class="content">
-              <a href="https://www.eight360.com/" target="_blank">
-                <h3>SpaceTeamsPRO</h3>
-              </a>
-              <p>
-                The Space Teams Platform for Research and Operations (PRO), developed at the Texas A&M ASTRO Lab &
-                SimDynamX LLC, is a platform made for large scale engineering system design, integration and
-                collaboration. It is a Virtual Reality 'Sandbox' environment designed to enable students, government and
-                commercial entities to collaborate, design, evaluate and experience technology, to simulate and evaluate
-                space system architectures.
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </section>
-  </section>
-
-  <script>
-    // Select all card elements
-    const cards = document.querySelectorAll(".technology-card");
-
-    // Apply event listeners to each card
-    cards.forEach((card) => {
-      // Add an event listener for when the mouse moves over the card
-      card.addEventListener("mousemove", (e) => {
-        const cardRect = card.getBoundingClientRect();
-        const x = e.clientX - cardRect.left; // X coordinate within the card
-        const y = e.clientY - cardRect.top; // Y coordinate within the card
-
-        const centerX = cardRect.width / 2;
-        const centerY = cardRect.height / 2;
-
-        const rotateX = ((y - centerY) / centerY) * 5; // Tilt on the X-axis
-        const rotateY = ((centerX - x) / centerX) * 8; // Tilt on the Y-axis
-
-        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        // Add an event listener for when the mouse leaves the card
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "rotateX(0) rotateY(0)";
+        });
       });
-
-      // Add an event listener for when the mouse leaves the card
-      card.addEventListener("mouseleave", () => {
-        card.style.transform = "rotateX(0) rotateY(0)";
-      });
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

@@ -505,7 +505,7 @@
       align-self: center;
     }
 
-    .middle-section .card-header button {
+    .middle-section .card-header a {
       display: inline-flex;
       align-items: center;
       background-color: #500000;
@@ -519,7 +519,7 @@
       border-radius: 5px;
     }
 
-    .middle-section .card-header button:hover .arrow {
+    .middle-section .card-header a:hover .arrow {
       transform: translateX(5px);
     }
 
@@ -529,7 +529,7 @@
       transition: transform 0.3s ease;
     }
 
-    .middle-section .card-header button:hover {
+    .middle-section .card-header a:hover {
       scale: 1.05;
     }
 
@@ -621,6 +621,10 @@
       /* Center and add space above and below */
     }
 
+    .research-button{
+      display: block;
+    }
+
     /* Responsive for tablets */
     @media (max-width: 768px) {
       .middle-section .cards {
@@ -643,8 +647,7 @@
       }
 
       .research-button {
-        display: none;
-        background-color: red;
+        display: none !important;
       }
     }
   </style>
@@ -660,14 +663,14 @@
         <div class="gradient-overlay"></div>
         <div class="carousel">
           <div class="carousel-slide">
-            <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-1.png" alt="Slide 1" />
+            <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/Untitled.png" alt="Slide 1" />
           </div>
-          <div class="carousel-slide">
+          <!-- <div class="carousel-slide">
             <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-1.png" alt="Slide 2" />
           </div>
           <div class="carousel-slide">
             <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-1.png" alt="Slide 3" />
-          </div>
+          </div> -->
         </div>
         <!-- Arrows -->
         <button class="prev">&#10094;</button>
@@ -703,8 +706,9 @@
             </svg>
             Research
           </h2>
-          <a class="research-button" href="https://safe.engr.tamu.edu/research-projects/"><button>VIEW ALL RESEARCH
-              <span class="arrow">»</span></button></a>
+          <a class="research-button" href="https://safe.engr.tamu.edu/research-projects/">VIEW ALL RESEARCH
+               <span class="arrow">»</span>
+            </a>
         </div>
 
         <section class="cards">
@@ -732,7 +736,7 @@
           <div class="card-container">
             <a class="card" href="https://safe.engr.tamu.edu/research-projects/#2">
               <div class="thumbnail">
-                <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-1.png"
+                <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/Untitled.png"
                   alt="Project Thumbnail" />
               </div>
               <div class="card-content">
@@ -748,7 +752,7 @@
             <a class="card" href="https://safe.engr.tamu.edu/research-projects/#3">
               <div class="thumbnail">
                 <img
-                  src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/6a22ca67-08dd-4f5c-af64-bb283d066851.png"
+                  src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/astronaut.png"
                   alt="Project Thumbnail" />
               </div>
               <div class="card-content">
@@ -814,9 +818,14 @@
         <div class="link-list link-list--leading">
           <ul>
             <li>
-              <a href="https://www.nasa.gov/wp-content/uploads/2019/06/jsc-hhp-occupantprotectiongroup.pdf?emrc=23aa38"
+              <a href="https://www.eaa.org/eaa/pilots/safety-wire-articles/02-17-2017-faa-experimental-fatal-accident-dashboard"
                 target="_blank">
-                <p>Spacecraft Occupant Protection</p>
+                <p>FAA Aviation Accident Dashboard</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ghbmc.com/" target="_blank">
+                <p>Global Human Body Models Consortium</p>
               </a>
             </li>
             <li>
@@ -825,9 +834,13 @@
               </a>
             </li>
             <li>
-              <a href="https://www.eaa.org/eaa/pilots/safety-wire-articles/02-17-2017-faa-experimental-fatal-accident-dashboard"
-                target="_blank">
-                <p>EAA Aviation Accident Dashboard</p>
+              <a href="https://www.nationalacademies.org/bohsi/board-on-human-systems-integration" target="_blank">
+                <p>National Academies Board on Human Systems Integration</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://safeassociation.com/" target="_blank">
+                <p>SAFE</p>
               </a>
             </li>
             <li>
@@ -835,7 +848,26 @@
                 <p>Reliability Engineering</p>
               </a>
             </li>
-
+            <li>
+              <a href="https://today.tamu.edu/2023/08/17/regents-approve-texas-am-space-institute/" target="_blank">
+                <p>Regents Approve Texas A&M Space Institute</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.kxxv.com/news/local-news/in-your-neighborhood/brazos-county/texas-a-m-university/texas-a-m-builds-first-ever-life-size-simulation-of-the-moon-and-mars-surface" target="_blank">
+                <p>Texas A&M builds first-ever life-size simulation of the moon and Mars' surface</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://space.texas.gov/" target="_blank">
+                <p>Texas Space Comission</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.nasa.gov/wp-content/uploads/2019/06/jsc-hhp-occupantprotectiongroup.pdf?emrc=23aa38" target="_blank">
+                <p>Spacecraft Occupant Protection</p>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -917,7 +949,7 @@
 
     function resetInterval() {
       clearInterval(interval);
-      interval = setInterval(autoPlay, 5000);
+      interval = setInterval(autoPlay, 10000);
     }
 
     window.addEventListener("resize", () => {
