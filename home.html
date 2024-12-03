@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>My Web Page</title>
-</head>
-
 <body>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -144,19 +137,19 @@
       font-weight: 400;
     }
 
-    .custom-page a{
+    .custom-page a {
       text-decoration: none;
     }
 
     .custom-page h3 {
       font-size: 1.5em !important;
       font-family: "Oswald", sans-serif !important;
-      font-weight: 600 ;
+      font-weight: 600;
       margin: 0;
       color: #500000 !important;
     }
 
-    .custom-page h3.news{
+    .custom-page h3.news {
       font-size: 1.25em !important;
       font-family: "Open Sans", sans-serif !important;
       font-weight: 400;
@@ -175,37 +168,46 @@
     }
 
     /* Carousel Styles */
+    /* General reset */
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
 
+    /* Container for the carousel */
     .carousel-container {
       position: relative;
       width: 100%;
       height: 70vh;
-      /* 80% of viewport height */
+      /* Adjust as needed */
       overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      user-select: none;
     }
 
-    .carousel {
-      display: flex;
+    /* All slides stacked on top of each other */
+    .carousel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      transition: transform 0.5s ease-in-out;
+      opacity: 0;
+      transition: opacity 1.2s linear;
+      /* Crossfade effect */
     }
 
-    .carousel-slide {
-      min-width: 100%;
-      box-sizing: border-box;
+    /* Make the active slide visible */
+    .carousel-slide.active {
+      opacity: 1;
     }
 
-    .carousel-slide img,
-    .carousel-slide video {
+    .carousel-slide video,
+    .carousel-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      /* This ensures the image or video covers the container without stretching */
+      pointer-events: none;
+      /* Prevent interaction */
     }
 
     /* Arrows */
@@ -421,7 +423,7 @@
       border-bottom: #500000 0.1em solid;
       transition: all 0.1s ease-out;
       padding: 0 1em;
-    
+
     }
 
     .news-container .card:hover {
@@ -444,7 +446,7 @@
       flex-direction: column;
       justify-content: center;
       flex: 1;
-     
+
     }
 
     .news-container .card div.content h3,
@@ -621,7 +623,7 @@
       /* Center and add space above and below */
     }
 
-    .research-button{
+    .research-button {
       display: block;
     }
 
@@ -662,19 +664,23 @@
         </div>
         <div class="gradient-overlay"></div>
         <div class="carousel">
-          <div class="carousel-slide">
-            <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/Untitled.png" alt="Slide 1" />
+          <!-- Add 'active' class to the first slide -->
+          <div class="carousel-slide active">
+            <video autoplay muted>
+              <source src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/11/OrionDockingNOVADemo2-1-1-1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
           <!-- <div class="carousel-slide">
-            <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-1.png" alt="Slide 2" />
+            <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/Untitled.png" alt="Slide 2" />
           </div>
           <div class="carousel-slide">
             <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-1.png" alt="Slide 3" />
           </div> -->
         </div>
         <!-- Arrows -->
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
+        <!-- <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button> -->
       </div>
 
       <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous
@@ -707,13 +713,13 @@
             Research
           </h2>
           <a class="research-button" href="https://safe.engr.tamu.edu/research-projects/">VIEW ALL RESEARCH
-               <span class="arrow">»</span>
-            </a>
+            <span class="arrow">»</span>
+          </a>
         </div>
 
         <section class="cards">
           <div class="card-container">
-            <a class="card" href="https://safe.engr.tamu.edu/research-projects/#1">
+            <a class="card" href="https://safe.engr.tamu.edu/research-projects/#4">
               <div class="thumbnail">
                 <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/image-2-e1728951144876.png"
                   alt="Project Thumbnail" />
@@ -734,32 +740,38 @@
           </div>
 
           <div class="card-container">
-            <a class="card" href="https://safe.engr.tamu.edu/research-projects/#2">
+            <a class="card" href="https://safe.engr.tamu.edu/research-projects/#3">
               <div class="thumbnail">
-                <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/Untitled.png"
+                <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/11/IMG_9749-e1731626747259.png"
                   alt="Project Thumbnail" />
               </div>
               <div class="card-content">
-                <h3 class="card-title">General Aviation Accident Causal Analysis</h3>
+                <h3 class="card-title">Development of a Ground-Based Analog for In-Flight Vestibular Disruption</h3>
                 <p class="card-description">
-                  Every year, over one thousand fixed-wing general aviation accidents occur in the United States.
-                  At least 10% of these are fatal. At our lab, we attempt to study the causes of these accidents
+                  Upon entry into a microgravity environment, astronauts experience altered inputs to the vestibular
+                  system, leading to motion sickness and sensorimotor challenges. Current ground-based analogs such as
+                  parabolic flight are limited by high costs and short exposure periods (inadequate for studying
+                  adaptation to microgravity). The goal of this project is to develop a new ground-based analog for
+                  modeling these in-flight vestibular disturbances for both research and training applications.
                 </p>
               </div>
             </a>
           </div>
           <div class="card-container">
-            <a class="card" href="https://safe.engr.tamu.edu/research-projects/#3">
+            <a class="card" href="https://safe.engr.tamu.edu/research-projects/#2">
               <div class="thumbnail">
-                <img
-                  src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/astronaut.png"
+                <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/10/astronaut.png"
                   alt="Project Thumbnail" />
               </div>
               <div class="card-content">
                 <h3 class="card-title">Altered Gravity Ambulation</h3>
                 <p class="card-description">
-                  Biomechanical analysis of gait and postural changes associated with walking at simulated lunar and
-                  Martian gravity.
+                  Future manned missions to the moon and Mars will require significant surface EVAs. Altered
+                  gravity and vestibular deconditioning are likely to have major impacts on gait and ambulation,
+                  but very little data is available as the only human extraterrestrial surface EVAs occurred
+                  during the Apollo lunar EVAs over 50 years ago. It is imperative to accurately characterize the
+                  impacts of these combined stressors on performance, gait, workload, cardiovascular load, and
+                  metabolic load in order to safely plan and conduct EVAs on extraplanetary surfaces.
                 </p>
               </div>
             </a>
@@ -777,11 +789,11 @@
           News
         </h2>
         <div class="content">
-          <a class="card" href="https://www.linkedin.com/feed/update/urn:li:activity:7240411545040486400/" target="_blank">
+          <a class="card" href="https://www.linkedin.com/feed/update/urn:li:activity:7240411545040486400/"
+            target="_blank">
             <div class="thumbnail">
-              <img
-                src="https://media.licdn.com/dms/image/v2/D4E22AQFTshMb89JTtg/feedshare-shrink_800/feedshare-shrink_800/0/1726248631976?e=1732147200&v=beta&t=zwk-6Qg10zU_YVdcNzpymtX--1qmjZkvRsxjPvGK8g4" />
-            </div>
+              <img src="https://safe.engr.tamu.edu/wp-content/uploads/sites/223/2024/11/1726248631960.jpeg">
+                        </div>
             <div class="content">
               <h3 class="news">Congratulations to John Hayes for receiving the Best Student Paper Award from
                 the Aerospace Systems technical group!</h3>
@@ -854,7 +866,8 @@
               </a>
             </li>
             <li>
-              <a href="https://www.kxxv.com/news/local-news/in-your-neighborhood/brazos-county/texas-a-m-university/texas-a-m-builds-first-ever-life-size-simulation-of-the-moon-and-mars-surface" target="_blank">
+              <a href="https://www.kxxv.com/news/local-news/in-your-neighborhood/brazos-county/texas-a-m-university/texas-a-m-builds-first-ever-life-size-simulation-of-the-moon-and-mars-surface"
+                target="_blank">
                 <p>Texas A&M builds first-ever life-size simulation of the moon and Mars' surface</p>
               </a>
             </li>
@@ -864,7 +877,8 @@
               </a>
             </li>
             <li>
-              <a href="https://www.nasa.gov/wp-content/uploads/2019/06/jsc-hhp-occupantprotectiongroup.pdf?emrc=23aa38" target="_blank">
+              <a href="https://www.nasa.gov/wp-content/uploads/2019/06/jsc-hhp-occupantprotectiongroup.pdf?emrc=23aa38"
+                target="_blank">
                 <p>Spacecraft Occupant Protection</p>
               </a>
             </li>
@@ -874,88 +888,65 @@
     </section>
   </section>
   <script>
-    const carousel = document.querySelector(".carousel");
     const slides = document.querySelectorAll(".carousel-slide");
-    const prevButton = document.querySelector(".prev");
-    const nextButton = document.querySelector(".next");
+    let currentIndex = 0; // Start at the first slide
+    let interval; // Define the interval variable
 
-    let currentIndex = 1; // Start at first real slide
-    let isTransitioning = false; // Lock to prevent multiple fast clicks
-    let interval = setInterval(autoPlay, 7000); // Autoplay every 10 seconds
-
-    // Clone first and last slide to create infinite effect
-    const firstClone = slides[0].cloneNode(true);
-    const lastClone = slides[slides.length - 1].cloneNode(true);
-
-    // Append and prepend clones
-    carousel.appendChild(firstClone);
-    carousel.insertBefore(lastClone, slides[0]);
-
-    // Set carousel's initial translate position (now with cloned slides)
-    carousel.style.transform = `translateX(-${100 * currentIndex}%)`;
-
+    // Function to handle automatic slide change
     function autoPlay() {
-      if (!isTransitioning) {
-        nextSlide();
+      const currentSlide = slides[currentIndex];
+      const video = currentSlide.querySelector("video");
+
+      if (video) {
+        // If current slide has a video, wait until it ends to switch
+        video.currentTime = 0; // Reset video to start
+        video.play();
+        video.onended = () => nextSlide(); // Move to next slide when the video ends
+      } else {
+        // If the slide is an image, switch to the next slide after 15 seconds
+        interval = setTimeout(nextSlide, 15000); // 15 seconds for images
       }
     }
 
     function nextSlide() {
-      if (isTransitioning) return; // Prevent action during transition
-      currentIndex++;
-      isTransitioning = true;
-      carousel.style.transition = "transform 1.5s ease-in-out";
-      carousel.style.transform = `translateX(-${100 * currentIndex}%)`;
+      // Clear any existing interval or timeout
+      clearTimeout(interval);
 
-      carousel.addEventListener("transitionend", handleTransitionEnd);
+      // Hide the current slide
+      slides[currentIndex].classList.remove("active");
+
+      // Update index to the next slide, looping back to the start if necessary
+      currentIndex = (currentIndex + 1) % slides.length;
+
+      // Show the next slide
+      slides[currentIndex].classList.add("active");
+
+      // Start autoplay for the next slide
+      autoPlay();
     }
 
     function prevSlide() {
-      if (isTransitioning) return;
-      currentIndex--;
-      isTransitioning = true;
-      carousel.style.transition = "transform 1.5s ease-in-out";
-      carousel.style.transform = `translateX(-${100 * currentIndex}%)`;
+      // Clear any existing interval or timeout
+      clearTimeout(interval);
 
-      carousel.addEventListener("transitionend", handleTransitionEnd);
+      // Hide the current slide
+      slides[currentIndex].classList.remove("active");
+
+      // Update index to the previous slide, looping back to the end if necessary
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+
+      // Show the previous slide
+      slides[currentIndex].classList.add("active");
+
+      // Start autoplay for the previous slide
+      autoPlay();
     }
 
-    function handleTransitionEnd() {
-      isTransitioning = false;
-      // If we reach the clone at the end, jump to the real first slide
-      if (currentIndex === slides.length + 1) {
-        currentIndex = 1;
-        carousel.style.transition = "none"; // Remove transition to snap back
-        carousel.style.transform = `translateX(-${100 * currentIndex}%)`;
-      }
-      // If we reach the clone at the beginning, jump to the real last slide
-      if (currentIndex === 0) {
-        currentIndex = slides.length;
-        carousel.style.transition = "none";
-        carousel.style.transform = `translateX(-${100 * currentIndex}%)`;
-      }
-      carousel.removeEventListener("transitionend", handleTransitionEnd);
-    }
+    // Initialize autoplay on load
+    autoPlay();
 
-    prevButton.addEventListener("click", () => {
-      prevSlide();
-      resetInterval();
-    });
-
-    nextButton.addEventListener("click", () => {
-      nextSlide();
-      resetInterval();
-    });
-
-    function resetInterval() {
-      clearInterval(interval);
-      interval = setInterval(autoPlay, 10000);
-    }
-
-    window.addEventListener("resize", () => {
-      carousel.style.transform = `translateX(-${100 * currentIndex}%)`;
-    });
+    // Event listeners for manual control
+    document.querySelector(".prev").addEventListener("click", prevSlide);
+    document.querySelector(".next").addEventListener("click", nextSlide);
   </script>
 </body>
-
-</html>
